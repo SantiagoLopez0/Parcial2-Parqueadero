@@ -8,21 +8,14 @@ namespace Parcial2_Parqueadero.Models
     public class Vehicle
     {
         private string placa;
-        private static string[] TIPO = { "PARTICULAR", "CAMIONETA O MICROBUS" };
-        
+        private string tipo;
         private string marca;
-
-        public Vehicle(string placa, string tipo, string marca)
-        {
-            this.Placa = placa;
-            this.Marca = marca;
-        }
+        private int driverId;
 
 
         public string Placa { get => placa; set => placa = value; }
-        //public static string[] TIPO1 { get => TIPO; set => TIPO = value; }
         public string Marca { get => marca; set => marca = value; }
-
-        
+        public string Tipo { get => tipo; set => tipo = value; }
+        public int DriverId { get => driverId; set => driverId = value; }
     }
 }

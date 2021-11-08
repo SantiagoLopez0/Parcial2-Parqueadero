@@ -7,33 +7,15 @@ namespace Parcial2_Parqueadero.Models
 {
     public class Driver
     {
-        private int id;
-        private Sexo sexo;
+        private int identificador;
+        private string nombre;
+        private string sexo;
         private Boolean esAfiliado;
 
-        public Driver(int id, string sexo, Boolean esAfiliado)
-        {
-            this.Id = id;
-
-            if(sexo == "hombre")
-            {
-                this.Sexo = Sexo.HOMBRE;
-            }
-            else if (sexo == "mujer")
-            {
-                this.Sexo = Sexo.MUJER;
-            }
-            else if (sexo == "otro")
-            {
-                this.Sexo = Sexo.OTRO;
-            }
-
-            this.EsAfiliado = esAfiliado;
-        }
-
-        public int Id { get => id; set => id = value; }
+        public int Identificador { get => identificador; set => identificador = value; }
         
         public bool EsAfiliado { get => esAfiliado; set => esAfiliado = value; }
-        internal Sexo Sexo { get => sexo; set => sexo = value; }
+        public string Sexo { get => sexo; set => sexo = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
     }
 }
